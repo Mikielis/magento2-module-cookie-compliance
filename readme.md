@@ -1,7 +1,7 @@
 
 # EU cookie compliance, Magento 2 extension
 
-This cookie notification module adds a bar to your store which can be displayed in two different positions.<br />The bar contains a short sentence, two buttons - (more info and allow) and optionally the store’s logo.
+This cookie notification module adds a bar to your store which can be displayed in two different positions.<br />The bar contains a short sentence, two buttons - more info and allow, and optional store’s logo.
 
 In your Magento admin you will be able to set following settings:
 
