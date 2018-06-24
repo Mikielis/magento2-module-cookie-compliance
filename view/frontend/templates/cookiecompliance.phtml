@@ -1,0 +1,58 @@
+<?php if ($block->isModuleActive() === true) { ?>
+    <?php $logo = $this->getLogo(); ?>
+    <div id="cookiecompliance-block" class="<?php echo trim($block->getPosition()) ?>" style="display: none;">
+        <?php if ($logo !== false) { ?>
+            <div class="cookiecompliance-block-logo">
+                <img
+                    src="<?php echo $logo['src'] ?>"
+                    alt="<?php echo $logo['alt'] ?>"
+                    style="width: <?php echo $logo['width'] ?>px; height: <?php echo $logo['height'] ?>px"
+                >
+            </div>
+        <?php } ?>
+
+        <p><?php echo $block->getMessage(); ?></p>
+        <div class="buttons">
+            <button style="
+                color: #<?php echo trim($block->getButtonColor('read_more')); ?>;
+                background: #<?php echo trim($block->getButtonBackground('read_more')); ?>;
+                border-size: <?php echo trim($block->getButtonBorderSize('read_more')); ?>;
+                border-color: #<?php echo trim($block->getButtonBorderColor('read_more')); ?>;
+            " id="cookiecompliance-read-more">
+                <?php echo $block->getReadMoreButtonText(); ?>
+            </button>
+            
+            <button style="
+                color: #<?php echo trim($block->getButtonColor('approve')); ?>;
+                background: #<?php echo trim($block->getButtonBackground('approve')); ?>;
+                border-size: <?php echo trim($block->getButtonBorderSize('approve')); ?>;
+                border-color: #<?php echo trim($block->getButtonBorderColor('approve')); ?>;
+            " id="cookiecompliance-approve">
+                <?php echo $block->getApproveButtonText(); ?>
+            </button>
+        </div>
+    </div>
+    
+    <script type="text/x-magento-init">
+    {
+        "#cookiecompliance-block": {
+            "cookieCompliance": {
+                "container": "#cookiecompliance-block",
+                "approveButton": "#cookiecompliance-approve",
+                "approveButtonColor": "<?php echo trim($block->getButtonColor('approve')); ?>",
+                "approveButtonBackground": "<?php echo trim($block->getButtonBackground('approve')); ?>",
+                "approveButtonHoverColor": "<?php echo trim($block->getButtonColor('approve', 'hover')); ?>",
+                "approveButtonHoverBackground": "<?php echo trim($block->getButtonBackground('approve', 'hover')); ?>",
+                "readMoreButton": "#cookiecompliance-read-more",
+                "readMoreButtonColor": "<?php echo trim($block->getButtonColor('read_more')); ?>",
+                "readMoreButtonBackground": "<?php echo trim($block->getButtonBackground('read_more')); ?>",
+                "readMoreButtonHoverColor": "<?php echo trim($block->getButtonColor('read_more', 'hover')); ?>",
+                "readMoreButtonHoverBackground": "<?php echo trim($block->getButtonBackground('read_more', 'hover')); ?>",
+                "cookieLifetime": <?php echo $block->getLifetime(); ?>,
+                "cookieName": "<?php echo $block->getCookieName(); ?>",
+                "readMoreUrl": "<?php echo $block->getReadMoreUrl(); ?>"
+            }
+        }
+    }
+    </script>
+<?php } ?>

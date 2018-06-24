@@ -1,0 +1,23 @@
+{
+    "name": "mikielis/magento2-module-cookie-compliance",
+    "description": "EU cookie compliance, Magento 2 module",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0"
+    ],
+    "version": "0.0.1",
+    "require": {
+        "php": "7.0.2|7.0.4|~7.0.6|~7.1.0",
+        "magento/framework": "100.0.*|100.1.*|101.0.*",
+        "magento/module-theme": "*"
+    },
+    "authors": [{
+        "name": "Mikielis",
+        "email": "kamil.mikielis@netefficiency.co.uk",
+        "role": "Developer"
+    }],
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": { "Mikielis\\CookieCompliance\\": "" }
+    }
+}

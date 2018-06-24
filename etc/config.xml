@@ -1,0 +1,37 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <cookiecompliance>
+            <functional>
+                <activation>1</activation>
+                <lifetime>3600</lifetime>
+            </functional>
+            <content>
+                <message>This website uses cookies to improve your experience. Cookies help us remember you and show you more things we think you’ll like.</message>
+                <read_more_text>Read more</read_more_text>
+                <approve_text>Accept cookies</approve_text>
+            </content>
+            <design>
+                <position>top</position>
+                <logo>
+                    <display>0</display>
+                </logo>
+                <read_more_button>
+                    <background>FFFFFF</background>
+                    <border_color>CCCCCC</border_color>
+                    <color>666666</color>
+                    <border_size>1</border_size>
+                    <hover_background>CCCCCC</hover_background>
+                    <hover_color>000000</hover_color>
+                </read_more_button>
+                <approve_button>
+                    <background>EEEEEE</background>
+                    <border_color>5C9732</border_color>
+                    <color>666666</color>
+                    <border_size>1</border_size>
+                    <hover_background>5C9732</hover_background>
+                    <hover_color>FFFFFF</hover_color>
+                </approve_button>
+            </design>
+        </cookiecompliance>
+    </default>
+</config>

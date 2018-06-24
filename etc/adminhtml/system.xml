@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mikielis" translate="label" sortOrder="10">
+            <label>Mikielis</label>
+        </tab>
+        <section id="cookiecompliance" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Cookie Compliance</label>
+            <tab>mikielis</tab>
+            <resource>Mikielis_CookieCompliance::config_cookiecompliance</resource>
+            <group id="functional" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Functional Settings</label>
+                <field id="activation" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable / disable module</comment>
+                </field>
+                <field id="lifetime" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Cookie lifetime in seconds</label>
+                    <validate>validate-number</validate>
+                    <comment>Cookie lifetime is set to 3600 by default</comment>
+                </field>
+            </group>
+            <group id="content" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Content</label>
+                <field id="message" translate="label" type="textarea" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message</label>
+                </field>
+                <field id="read_more_text" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>More info text</label>
+                </field>
+                <field id="read_more_link" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>More info button link</label>
+                    <source_model>Mikielis\CookieCompliance\Model\PageList</source_model>
+                </field>
+                <field id="approve_text" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allow text</label>
+                </field>
+            </group>
+            <group id="design" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Design Settings</label>
+                <field id="position" translate="label comment" type="radios" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Message position</label>
+                    <source_model>Mikielis\CookieCompliance\Model\Position</source_model>
+                    <comment>Position of the cookie message</comment>
+                </field>
+                <group id="logo" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Logo</label>
+                    <field id="display" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Display logo above the message</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                </group>
+                <group id="read_more_button" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>The read more button</label>
+                    <field id="color" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Font color of the "read more" button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: 666666</comment>
+                    </field>
+                    <field id="background" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Background of the "read more" button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: CCCCCC</comment>
+                    </field>
+                    <field id="border_color" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Border color of the "read more" button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: CCCCCC</comment>
+                    </field>
+                    <field id="border_size" translate="label comment" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Border size in pixels of the "read more" button</label>
+                        <validate>validate-length minimum-length-1 validate-length maximum-length-3 validate-number</validate>
+                        <comment>Example: 1</comment>
+                    </field>
+                    <field id="hover_background" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>[Hover] background color of the "read more" button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: CCCCCC</comment>
+                    </field>
+                    <field id="hover_color" translate="label comment" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>[Hover] text color of the "read more" button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: CCCCCC</comment>
+                    </field>
+                </group>
+                <group id="approve_button" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>The allow button</label>
+                    <field id="color" translate="label comment" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Font color of the allow button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: 666666</comment>
+                    </field>
+                    <field id="background" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Background of the allow button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: CCCCCC</comment>
+                    </field>
+                    <field id="border_color" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Border color of the allow button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: CCCCCC</comment>
+                    </field>
+                    <field id="border_size" translate="label comment" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Border size in pixels of the allow button</label>
+                        <validate>validate-length minimum-length-1 validate-length maximum-length-3 validate-number</validate>
+                        <comment>Example: 1</comment>
+                    </field>
+                    <field id="hover_background" translate="label comment" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>[Hover] background color of the allow button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: CCCCCC</comment>
+                    </field>
+                    <field id="hover_color" translate="label comment" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>[Hover] text color of the allow button</label>
+                        <validate>validate-exadecimal-color-length validate-alphanum validate-length maximum-length-6</validate>
+                        <comment>Example: CCCCCC</comment>
+                    </field>
+                </group>
+            </group>
+        </section>
+    </system>
+</config>
