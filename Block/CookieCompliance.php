@@ -8,13 +8,13 @@ use \Magento\Theme\Block\Html\Header\Logo;
 
 class CookieCompliance extends \Magento\Framework\View\Element\Template
 {
-    private $dataHelper;
+    protected $dataHelper;
 
-    private $storeManager;
+    protected $storeManager;
 
-    private $logo;
+    protected $logo;
 
-    private $cookieName = 'mikielis_cookie_compliance';
+    protected $cookieName = 'mikielis_cookie_compliance';
 
     /**
      * CookieCompliance constructor.
