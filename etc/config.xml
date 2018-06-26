@@ -4,6 +4,10 @@
             <functional>
                 <activation>1</activation>
                 <lifetime>3600</lifetime>
+                <close_button>
+                    <enable_close_button>0</enable_close_button>
+                    <close_button_behaviour>allowAndClose</close_button_behaviour>
+                </close_button>
             </functional>
             <content>
                 <message>This website uses cookies to improve your experience. Cookies help us remember you and show you more things we think you’ll like.</message>

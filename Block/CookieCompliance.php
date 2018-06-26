@@ -8,13 +8,13 @@ use \Magento\Theme\Block\Html\Header\Logo;
 
 class CookieCompliance extends \Magento\Framework\View\Element\Template
 {
-    protected $dataHelper;
+    protected $_dataHelper;
 
-    protected $storeManager;
+    protected $_storeManager;
 
-    protected $logo;
+    protected $_logo;
 
-    protected $cookieName = 'mikielis_cookie_compliance';
+    protected $_cookieName = 'mikielis_cookie_compliance';
 
     /**
      * CookieCompliance constructor.
@@ -25,9 +25,9 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function __construct(Context $context, Data $dataHelper, Logo $logo, array $data)
     {
-        $this->dataHelper = $dataHelper;
-        $this->storeManager = $context->getStoreManager();
-        $this->logo = $logo;
+        $this->_dataHelper = $dataHelper;
+        $this->_storeManager = $context->getStoreManager();
+        $this->_logo = $logo;
         parent::__construct($context, $data);
     }
 
@@ -45,7 +45,7 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function isModuleActive() 
     {
-        return (boolean) $this->dataHelper->getConfig('cookiecompliance/functional/activation');
+        return (boolean) $this->_dataHelper->getConfig('cookiecompliance/functional/activation');
     }
 
     /**
@@ -54,7 +54,7 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getPosition()
     {
-        return $this->dataHelper->getConfig('cookiecompliance/design/position');
+        return $this->_dataHelper->getConfig('cookiecompliance/design/position');
     }
 
     /**
@@ -63,7 +63,7 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getMessage() 
     {
-        return $this->dataHelper->getConfig('cookiecompliance/content/message');
+        return $this->_dataHelper->getConfig('cookiecompliance/content/message');
     }
 
     /**
@@ -72,7 +72,7 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getReadMoreButtonText()
     {
-        return $this->dataHelper->getConfig('cookiecompliance/content/read_more_text');
+        return $this->_dataHelper->getConfig('cookiecompliance/content/read_more_text');
     }
 
     /**
@@ -81,7 +81,7 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getReadMoreButtonLink()
     {
-        return $this->dataHelper->getConfig('cookiecompliance/content/read_more_link');
+        return $this->_dataHelper->getConfig('cookiecompliance/content/read_more_link');
     }
 
     /**
@@ -90,7 +90,7 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getApproveButtonText()
     {
-        return $this->dataHelper->getConfig('cookiecompliance/content/approve_text');
+        return $this->_dataHelper->getConfig('cookiecompliance/content/approve_text');
     }
 
     /**
@@ -103,16 +103,16 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
     {
         if ($button == 'read_more') {
             if ($state == 'hover') {
-                return $this->dataHelper->getConfig('cookiecompliance/design/read_more_button/hover_color');
+                return $this->_dataHelper->getConfig('cookiecompliance/design/read_more_button/hover_color');
             }
 
-            return $this->dataHelper->getConfig('cookiecompliance/design/read_more_button/color');
+            return $this->_dataHelper->getConfig('cookiecompliance/design/read_more_button/color');
         } elseif ($button == 'approve') {
             if ($state == 'hover') {
-                return $this->dataHelper->getConfig('cookiecompliance/design/approve_button/hover_color');
+                return $this->_dataHelper->getConfig('cookiecompliance/design/approve_button/hover_color');
             }
 
-            return $this->dataHelper->getConfig('cookiecompliance/design/approve_button/color');
+            return $this->_dataHelper->getConfig('cookiecompliance/design/approve_button/color');
         }
     }
 
@@ -126,16 +126,16 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
     {
         if ($button == 'read_more') {
             if ($state == 'hover') {
-                return $this->dataHelper->getConfig('cookiecompliance/design/read_more_button/hover_background');
+                return $this->_dataHelper->getConfig('cookiecompliance/design/read_more_button/hover_background');
             }
 
-            return $this->dataHelper->getConfig('cookiecompliance/design/read_more_button/background');
+            return $this->_dataHelper->getConfig('cookiecompliance/design/read_more_button/background');
         } elseif ($button == 'approve') {
             if ($state == 'hover') {
-                return $this->dataHelper->getConfig('cookiecompliance/design/approve_button/hover_background');
+                return $this->_dataHelper->getConfig('cookiecompliance/design/approve_button/hover_background');
             }
 
-            return $this->dataHelper->getConfig('cookiecompliance/design/approve_button/background');
+            return $this->_dataHelper->getConfig('cookiecompliance/design/approve_button/background');
         }
     }
 
@@ -147,9 +147,9 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
     public function getButtonBorderColor($button)
     {
         if ($button == 'read_more') {
-            return $this->dataHelper->getConfig('cookiecompliance/design/read_more_button/border_color');
+            return $this->_dataHelper->getConfig('cookiecompliance/design/read_more_button/border_color');
         } elseif ($button == 'approve') {
-            return $this->dataHelper->getConfig('cookiecompliance/design/approve_button/border_color');
+            return $this->_dataHelper->getConfig('cookiecompliance/design/approve_button/border_color');
         }
     }
 
@@ -161,9 +161,9 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
     public function getButtonBorderSize($button)
     {
         if ($button == 'read_more') {
-            return $this->dataHelper->getConfig('cookiecompliance/design/read_more_button/border_size');
+            return $this->_dataHelper->getConfig('cookiecompliance/design/read_more_button/border_size');
         } elseif ($button == 'approve') {
-            return $this->dataHelper->getConfig('cookiecompliance/design/approve_button/border_size');
+            return $this->_dataHelper->getConfig('cookiecompliance/design/approve_button/border_size');
         }
     }
 
@@ -173,7 +173,7 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getLifeTime()
     {
-        return (int) $this->dataHelper->getConfig('cookiecompliance/functional/lifetime');
+        return (int) $this->_dataHelper->getConfig('cookiecompliance/functional/lifetime');
     }
 
     /**
@@ -182,7 +182,7 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getCookieName()
     {
-        return $this->cookieName;
+        return $this->_cookieName;
     }
 
     /**
@@ -191,9 +191,27 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getReadMoreUrl()
     {
-        $url = $this->_storeManager->getStore()->getBaseUrl() . $this->dataHelper->getConfig('cookiecompliance/content/read_more_link');
+        $url = $this->_storeManager->getStore()->getBaseUrl() . $this->_dataHelper->getConfig('cookiecompliance/content/read_more_link');
         
         return $url;
+    }
+
+    /**
+     * Get info whether close button is enabled or disabled
+     * @return boolean
+     */
+    public function isCloseButtonEnabled()
+    {
+        return (bool) $this->_dataHelper->getConfig('cookiecompliance/functional/close_button/enable_close_button');
+    }
+
+    /**
+     * Get expected behavrious of close button (once it's clicked)
+     * @return string
+     */
+    public function getCloseButtonBehaviour()
+    {
+        return $this->_dataHelper->getConfig('cookiecompliance/functional/close_button/close_button_behaviour');
     }
 
     /**
@@ -202,12 +220,12 @@ class CookieCompliance extends \Magento\Framework\View\Element\Template
      */
     public function getLogo()
     {
-        if ((bool) $this->dataHelper->getConfig('cookiecompliance/design/logo/display') === true) {
+        if ((bool) $this->_dataHelper->getConfig('cookiecompliance/design/logo/display') === true) {
             $logo = [
-                'src' => $this->logo->getLogoSrc(),
-                'alt' => $this->logo->getLogoAlt(),
-                'width' => $this->logo->getLogoWidth(),
-                'height' => $this->logo->getLogoHeight()
+                'src' => $this->_logo->getLogoSrc(),
+                'alt' => $this->_logo->getLogoAlt(),
+                'width' => $this->_logo->getLogoWidth(),
+                'height' => $this->_logo->getLogoHeight()
             ];
 
             return $logo;

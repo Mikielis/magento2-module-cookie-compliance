@@ -1,6 +1,10 @@
 <?php if ($block->isModuleActive() === true) { ?>
     <?php $logo = $this->getLogo(); ?>
     <div id="cookiecompliance-block" class="<?php echo trim($block->getPosition()) ?>" style="display: none;">
+        <?php if ($block->isCloseButtonEnabled() === true) { ?>
+            <span class="close">x</span>
+        <?php } ?>
+
         <?php if ($logo !== false) { ?>
             <div class="cookiecompliance-block-logo">
                 <img
@@ -50,7 +54,9 @@
                 "readMoreButtonHoverBackground": "<?php echo trim($block->getButtonBackground('read_more', 'hover')); ?>",
                 "cookieLifetime": <?php echo $block->getLifetime(); ?>,
                 "cookieName": "<?php echo $block->getCookieName(); ?>",
-                "readMoreUrl": "<?php echo $block->getReadMoreUrl(); ?>"
+                "readMoreUrl": "<?php echo $block->getReadMoreUrl(); ?>",
+                "closeButton": "#cookiecompliance-block .close",
+                "closeButtonBehaviour": "<?php echo $block->getCloseButtonBehaviour(); ?>"
             }
         }
     }

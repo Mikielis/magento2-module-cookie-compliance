@@ -20,6 +20,18 @@
                     <validate>validate-number</validate>
                     <comment>Cookie lifetime is set to 3600 by default</comment>
                 </field>
+                <group id="close_button" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Close button</label>
+                    <field id="enable_close_button" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Enable close button</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment>Enable / disable close button in top right corner</comment>
+                    </field>
+                    <field id="close_button_behaviour" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Behaviour</label>
+                        <source_model>Mikielis\CookieCompliance\Model\CloseOptions</source_model>
+                    </field>
+                </group>
             </group>
             <group id="content" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Content</label>

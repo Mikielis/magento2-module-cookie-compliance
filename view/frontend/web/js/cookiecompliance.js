@@ -28,6 +28,20 @@ define([
             });
 
             /**
+             * Close button, click event
+             */
+            $(this.options.closeButton).click(function() {
+               /** Allow cookie and close information - an equals functionality to allow button */
+               if (params.closeButtonBehaviour == 'allowAndClose') {
+                   $(params.approveButton).trigger('click');
+                   
+               /** Only hide div with cookie compliance content */
+               } else if (params.closeButtonBehaviour == 'close') {
+                   $(params.container).hide('slow');
+               }
+            });
+
+            /**
              * Approve button, hover event
              */
             $(this.options.approveButton).hover(function() {
