@@ -1,7 +1,9 @@
 
-# EU cookie compliance, Magento 2 extension
+# EU cookie law compliance, Magento 2 extension
 
-This cookie notification module adds a bar to your store which can be displayed in two different positions.<br />The bar contains a short sentence, two buttons - more info and allow, and optional store’s logo.
+This Magento 2 extension adds a notice telling visitors that your website uses cookies.<br />
+Tbe bar can be displayed in two different positions and it contains a short sentence, three buttons - more info, allow cookies and close button in top right corner.<br />
+Optionally can be diplayed store’s logo above the sentence.
 
 In your Magento admin you will be able to set following settings:
 
@@ -9,6 +11,8 @@ In your Magento admin you will be able to set following settings:
 
 - enable/disable module
 - cookie lifetime (in seconds)
+- show/hide close button
+- change behaviour of the close button (hide bar or hide bar and allow cookies)
 
 > Design settings:
 
@@ -18,15 +22,15 @@ In your Magento admin you will be able to set following settings:
 
 > Content:
 
-- your sentence
+- add/change sentence
 - “more info” button text
 - “more info” button URL
 - “allow” button text
 
-#Screenshots
+# Screenshots
 
-Store: https://photos.google.com/photo/AF1QipMu1HN04iIfnaQiF2oFJLeofGKhuUfdXE6Albzc<br />
-Magento admin: https://photos.app.goo.gl/1r3jhFP2Zq2enwJ58
+Store: https://photos.app.goo.gl/FemGJaujbKYwEXZV7<br />
+Magento admin: https://photos.app.goo.gl/fxhzBcX4Rosw2WYv9
 
 # Installation
 
