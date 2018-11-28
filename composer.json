@@ -3,16 +3,15 @@
     "description": "EU cookie compliance, Magento 2 module",
     "type": "magento2-module",
     "license": [
-        "OSL-3.0"
+        "MIT"
     ],
-    "version": "0.0.1",
+    "version": "1.0.0",
     "require": {
         "php": "7.0.2|7.0.4|~7.0.6|~7.1.0"
     },
     "authors": [{
-        "name": "Mikielis",
-        "email": "kamil.mikielis@netefficiency.co.uk",
-        "role": "Developer"
+        "name": "Kamil Mikielis",
+        "email": "kamil.mikielis@gmail.com",
     }],
     "autoload": {
         "files": ["registration.php"],
