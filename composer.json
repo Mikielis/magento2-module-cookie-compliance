@@ -11,7 +11,7 @@
     },
     "authors": [{
         "name": "Kamil Mikielis",
-        "email": "kamil.mikielis@gmail.com",
+        "email": "kamil.mikielis@gmail.com"
     }],
     "autoload": {
         "files": ["registration.php"],
