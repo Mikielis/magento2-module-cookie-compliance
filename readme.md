@@ -29,15 +29,18 @@ In your Magento admin you will be able to set following settings:
 
 # Screenshots
 
-Store: https://photos.app.goo.gl/FemGJaujbKYwEXZV7<br />
-Magento admin: https://photos.app.goo.gl/fxhzBcX4Rosw2WYv9
+Store:
+<img src="https://user-images.githubusercontent.com/7327076/49171482-edec2c00-f33e-11e8-8a15-11e85d84b9d1.png"><br />
+
+Magento admin:
+<img src="https://user-images.githubusercontent.com/7327076/49171481-edec2c00-f33e-11e8-8f2f-b7921b39b020.png"><br />
 
 # Installation
 
 Pull in the extension through Composer:
 
 ```php
-composer require mikielis/magento2-module-cookie-compliance
+composer require "mikielis/magento2-module-cookie-compliance:*"
 ```
 
 Learn more on how to install Magento 2 extensions from the command line and follow listed steps:
